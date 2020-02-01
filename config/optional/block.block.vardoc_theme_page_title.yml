@@ -5,8 +5,8 @@ dependencies:
     - vardoc_theme
 id: vardoc_theme_page_title
 theme: vardoc_theme
-region: header
-weight: -1
+region: content_top
+weight: -3
 provider: null
 plugin: page_title_block
 settings:

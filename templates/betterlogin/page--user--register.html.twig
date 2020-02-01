@@ -11,7 +11,7 @@
 {% block main %}
 <div role="main" class="main-container {{ container }}">
   <div class="row">
-    <div id="auth-box" class="login col-10 offset-1 col-sm-4 offset-sm-4">
+    <div id="auth-box" class="login col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-4">
       <h1 id="page-user-register-title" class="sr-only">{{ title }}</h1>
       <div id="top-part">
         {# Highlighted #}
@@ -22,7 +22,7 @@
         {% endif %}
       </div>
       <div id="middle-part">
-        {{ page.header|without('vardoc_theme_local_tasks', 'vardoc_theme_breadcrumbs', 'vardoc_theme_local_actions', 'vardoc_theme_page_title') }}
+        {{ page.content_top|without('vardoc_theme_local_tasks', 'vardoc_theme_breadcrumbs', 'vardoc_theme_local_actions', 'vardoc_theme_page_title', 'exposedformbook_searchpage_search_sidebar') }}
         {% if (varbase.we_do_have_enabled_social_auth_modules.value) and (page.content.vardoc_theme_socialauthlogin) %}
           <h2 class="block-title"><span> {{ "Sign up with"|t }} </span></h2>
           {{ page.content.vardoc_theme_socialauthlogin }}
@@ -36,11 +36,11 @@
       <div id="bottom-part">
       {% if not logged_in %}
         <div class="login-link">
-          <a href="{{ path('user.login') }}"><i class="fas fa-sign-in-alt" aria-hidden="true"></i> {{ 'Login'|t }}</a>
+          <a href="{{ path('user.login') }}"><span class="icon glyphicon glyphicon-log-in" aria-hidden="true"></span> {{ 'Login'|t }}</a>
         </div>
       {% endif %}
         <div class="back-link">
-          <a href="{{ url('<front>') }}"><i class="fas fa-home" aria-hidden="true"></i> {{ 'Back to'|t }}  {{ site_name }}</a>
+          <a href="{{ url('<front>') }}"><span class="icon glyphicon glyphicon-home" aria-hidden="true"></span> {{ 'Back to'|t }}  {{ site_name }}</a>
         </div>
       </div>
     </div>

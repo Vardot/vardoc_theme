@@ -62,59 +62,60 @@
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
     {%
-      set navbar_classes = [
-        'mb-4',
-        'border-bottom',
-        'shadow-sm',
+      set avbar_attributes = [
+        'navbar',
+        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+        theme.settings.navbar_position and root_path ? 'navbar-' ~ theme.settings.navbar_position|clean_class : 'header',
+        'header',
       ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-      {% if container_navbar %}
-        <div class="container">
+      <div class="header-wrapper">
+      {% if not navbar_attributes.hasClass(header_container) %}
+        <div class="{{ container }}">
       {% endif %}
-      <div class="navbar-brand mr-md-auto">
+      <div class="navbar-header">
         {{ page.navigation }}
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-      {% if page.navigation_collapsible %}
-        <div id="navbar-collapse" class="navbar-collapse collapse">
-          <div class="navbar-nav ml-auto">
-            {{ page.navigation_collapsible }}
-          </div>
-        </div>
-      {% endif %}
-      {% if container_navbar %}
-        </div>
-      {% endif %}
-    </header>
-  {% endblock %}
-{% endif %}
-
-{# Header print #}
-<div class="d-none d-print-block header-print page-header mt-4 mb-3">
-  <div class="{{ container }}">
-    <div class="row">
-      <div class="col-sm-12">
-        {# Logo print #}
-        {% if logo_print %}
-          <img class="logo pull-left d-none d-print-inline-block" src="{{ logo_print }}" alt="{{ site_name }}"/>
+        {# .btn-navbar is used as the toggle for collapsed navbar content #}
+        {% if page.navigation_collapsible %}
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         {% endif %}
       </div>
-    </div>
-  </div>
-</div>
 
-{# hero_slider #}
-{% if page.hero_slider %}
-{% block hero_slider %}
-  <div class="hero_slider mt-n4">
-    {{ page.hero_slider }}
-  </div>
-{% endblock %}
+      {# Header right #}
+      {% if page.header_right %}
+        <div id="header-right" class="user-account-wrapper">
+          {{ page.header_right }}
+        </div>
+      {% endif %}
+
+      {# Navigation (collapsible) #}
+      {% if page.navigation_collapsible %}
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+          {{ page.navigation_collapsible }}
+        </div>
+      {% endif %}
+
+      {% if not navbar_attributes.hasClass(header_container) %}
+        </div>
+      {% endif %}
+
+      {# Top content Header #}
+      {% if page.header %}
+        {% block header %}
+          <div class="page-header" role="heading">
+            {{ page.header }}
+          </div>
+        {% endblock %}
+      {% endif %}
+      </div>
+    </header>
+  {% endblock %}
 {% endif %}
 
 {# Main #}
@@ -122,11 +123,11 @@
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
     <div class="row">
 
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
+      {# Top Content #}
+      {% if page.content_top %}
+        {% block content_top %}
           <div class="col-sm-12" role="heading">
-            {{ page.header }}
+            {{ page.content_top }}
           </div>
         {% endblock %}
       {% endif %}

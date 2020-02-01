@@ -1,8 +1,8 @@
 {
     "name": "vardoc_theme",
     "private": true,
-    "version": "8.6.0",
-    "description": "Vartheme bootstrap 4 sub theme implementation",
+    "version": "8.1.0",
+    "description": "Vardoc Theme (Bootstrap 4 - SASS) : The base theme for Vardoc Documentation Distribution. Uses the Bootstrap 4 framework SASS source files and must be compiled (not for beginners).",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,11 @@
         "SASS",
         "Bootstrap",
         "Drupal",
-        "Varbase"
+        "Varbase",
+        "Vardoc",
+        "Vardoc Theme",
+        "Documentation",
+        "Distribution"
     ],
     "author": "Vardot",
     "license": "GPL-2.0",

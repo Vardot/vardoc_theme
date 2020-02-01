@@ -7,7 +7,7 @@ dependencies:
     - vardoc_theme
 id: vardoc_theme_messages
 theme: vardoc_theme
-region: header
+region: content_top
 weight: -2
 provider: null
 plugin: system_messages_block

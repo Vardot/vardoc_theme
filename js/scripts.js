@@ -6,10 +6,22 @@
 (function ($, _, Drupal, drupalSettings) {
   'use strict';
 
-  Drupal.behaviors.vardoc_theme = {
+  Drupal.behaviors.vardocTheme = {
     attach: function (context) {
 
-      // vardoc_theme JavaScript behaviors goes here.
+      // VardocTheme JavaScript behaviors goes here.
+      $('#block-exposedformbook-searchpage-search form').submit(function () {
+        if ($.trim($(".form-text").val()) === "") {
+          return false;
+      }
+      });
+      // Adding the title attribute for the sharethis wrapper. 
+      $('.sharethis-wrapper').attr('title', Drupal.t('Share'));
+      // Hiding the notifications count when there are no notifications
+      var count = $('.notifications-count a').text();
+      if (count == 0) {
+        $('.notifications-count').css ('display','none');
+      }
     }
   };
 

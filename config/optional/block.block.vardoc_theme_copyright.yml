@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:b858d97d-eaa5-4cfe-af6f-b92c21bbca95'
@@ -8,9 +8,6 @@ dependencies:
     - block_content
   theme:
     - vardoc_theme
-third_party_settings:
-  block_class:
-    classes: ''
 id: vardoc_theme_copyright
 theme: vardoc_theme
 region: footer

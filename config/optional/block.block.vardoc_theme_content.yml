@@ -4,6 +4,7 @@ dependencies:
   module:
     - system
   theme:
+    - vartheme_bs4
     - vardoc_theme
 id: vardoc_theme_content
 theme: vardoc_theme

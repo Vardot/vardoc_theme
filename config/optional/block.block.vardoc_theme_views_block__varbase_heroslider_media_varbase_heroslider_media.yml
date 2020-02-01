@@ -1,18 +1,11 @@
 langcode: en
-status: true
+status: flase
 dependencies:
   config:
     - views.view.varbase_heroslider_media
-  module:
-    - block_class
-    - system
-    - views
     - varbase_heroslider_media
   theme:
     - vardoc_theme
-third_party_settings:
-  block_class:
-    classes: ''
 id: vardoc_theme_views_block__varbase_heroslider_media_varbase_heroslider_media
 theme: vardoc_theme
 region: hero_slider

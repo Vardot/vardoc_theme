@@ -5,7 +5,7 @@ dependencies:
     - vardoc_theme
 id: vardoc_theme_local_tasks
 theme: vardoc_theme
-region: header
+region: content_top
 weight: 0
 provider: null
 plugin: local_tasks_block
