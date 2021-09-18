@@ -1,11 +1,9 @@
-core: 8.x
-type: theme
-base theme: vartheme_bs4
-
 name: 'Vardoc Theme (Bootstrap 4 - SASS)'
 description: 'The base theme for Vardoc Documentation Distribution. Uses the Bootstrap 4 framework SASS source files and must be compiled (not for beginners).'
+type: theme
+base theme: vartheme_bs4
 package: Vardoc
-project: vardoc
+core_version_requirement: ^8 || ^9
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'

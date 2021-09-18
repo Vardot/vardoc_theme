@@ -1,6 +1,5 @@
 /* Insert your Vardoc Theme header custom SASS styling. */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
-body {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic); body {
   font-family: "Open Sans";
   font-size: 16px;
   color: #696969;
@@ -38,7 +37,7 @@ header#navbar .menu .active a {
   background-image: url("../../images/laptop.png");
   background-position: 50% 50%;
   -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   min-height: 60vh;
 }
 
@@ -75,7 +74,7 @@ header#navbar .menu .active a {
 }
 
 .path-frontpage .navbar .navbar-nav li a:hover {
-  color: #99B3DD;
+  color: #99b3dd;
 }
 
 @media (min-width: 576px) {
@@ -97,7 +96,7 @@ header#navbar .menu .active a {
 }
 
 .navbar .navbar-nav li a:hover {
-  color: #99B3DD;
+  color: #99b3dd;
 }
 
 .page-header {
@@ -228,7 +227,7 @@ header#navbar .menu .active a {
   border-color: transparent;
   background: transparent;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .navbar-default .user-account-wrapper .header-avatar .dropdown-toggle:hover {
@@ -236,7 +235,7 @@ header#navbar .menu .active a {
 }
 
 .navbar-default .user-account-wrapper .header-avatar .dropdown-toggle:hover .user-full-name {
-  color: #99B3DD;
+  color: #99b3dd;
 }
 
 .navbar-default .user-account-wrapper .header-avatar .dropdown-toggle .user-avatar {
@@ -348,7 +347,7 @@ header#navbar .menu .active a {
 
 .navbar-default .user-account-wrapper .header-account-menu ul li a {
   font-size: 12px;
-  color: #2A2A2A;
+  color: #2a2a2a;
   padding: 10px;
   text-transform: initial;
 }
